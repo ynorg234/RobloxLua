@@ -108,7 +108,7 @@ end;
 
 local lastMousePos
 local lastGoalPos
-local DRAG_SPEED = (8); -- // The speed of the UI darg.
+local DRAG_SPEED = (15);
 function Update(dt)
 	if not (startPos) then return end;
 	if not (dragging) and (lastGoalPos) then
