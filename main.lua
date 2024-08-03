@@ -148,7 +148,7 @@ task.spawn(C_3);
 -- StarterGui.ScreenGui.Frame.TextButton.LocalScript
 local function C_5()
 local script = G2L["5"];
-	local player = game.Players.LocalPlayer.PlayerGui.Frame.TextBox.Text
+	local player = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextBox.Text
 	tweento(player)
 	
 end;
