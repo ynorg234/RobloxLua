@@ -2,7 +2,7 @@ function tweenpos(x,y,z)
      local serv = game:GetService("TweenService")
      local root = game.Players.LocalPlayer.Character.HumanoidRootPart
      local info = TweenInfo.new(
-         0.5,
+         1,
          Enum.EasingStyle.Quad,
          Enum.EasingDirection.Out,
          0,
@@ -30,7 +30,7 @@ function getPlr(Name)
 	 end
 function tweento(plr)
     local otherplr = getPlr(plr)
-    tweenpos(otherplr.LocalPlayer.Character.HumanoidRootPart.X+3, otherplr.LocalPlayer.Character.HumanoidRootPart.Y+1, otherplr.LocalPlayer.Character.HumanoidRootPart.Z)
+    tweenpos(otherplr.Character.HumanoidRootPart.Position.X, otherplr.Character.HumanoidRootPart.Position.Y, otherplr.Character.HumanoidRootPart.Position.Z)
 end
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
@@ -41,7 +41,7 @@ end
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 7 | Scripts: 2 | Modules: 0
+-- Instances: 5 | Scripts: 0 | Modules: 0
 local G2L = {};
 
 -- StarterGui.ScreenGui
@@ -52,47 +52,45 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["2"]["Size"] = UDim2.new(0, 249, 0, 116);
-G2L["2"]["Position"] = UDim2.new(0.34727, 0, 0.37702, 0);
+G2L["2"]["Size"] = UDim2.new(0, 263, 0, 119);
+G2L["2"]["Position"] = UDim2.new(0.36227, 0, 0.33657, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
--- StarterGui.ScreenGui.Frame.TextButton
-G2L["3"] = Instance.new("TextButton", G2L["2"]);
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["TextSize"] = 14;
-G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(124, 124, 124);
-G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0, 158, 0, 24);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[Go!]];
-G2L["3"]["Position"] = UDim2.new(0.1821, 0, 0.78797, 0);
-
 -- StarterGui.ScreenGui.Frame.TextLabel
-G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(132, 132, 132);
+G2L["3"]["TextSize"] = 30;
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Michroma.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[FE Player TP]];
+G2L["3"]["Position"] = UDim2.new(0.11787, 0, 0, 0);
+
+-- StarterGui.ScreenGui.Frame.TextButton
+G2L["4"] = Instance.new("TextButton", G2L["2"]);
 G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["4"]["TextSize"] = 30;
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Michroma.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextSize"] = 14;
 G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(124, 124, 124);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 200, 0, 23);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[FE Player TP]];
-G2L["4"]["Position"] = UDim2.new(0.09815, 0, -0.00379, 0);
+G2L["4"]["Text"] = [[Go!]];
+G2L["4"]["Position"] = UDim2.new(0.11597, 0, 0.80418, 0);
 
 -- StarterGui.ScreenGui.Frame.TextBox
 G2L["5"] = Instance.new("TextBox", G2L["2"]);
-G2L["5"]["SelectionStart"] = 1;
 G2L["5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["BorderSizePixel"] = 0;
 G2L["5"]["TextSize"] = 14;
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(124, 124, 124);
 G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5"]["Size"] = UDim2.new(0, 194, 0, 32);
-G2L["5"]["Position"] = UDim2.new(0.12048, 0, 0.42241, 0);
+G2L["5"]["Size"] = UDim2.new(0, 200, 0, 21);
+G2L["5"]["Position"] = UDim2.new(0.11787, 0, 0.47899, 0);
 G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Text"] = [[Enter Username here!]];
-return G2L["1"], require;
+G2L["5"]["Text"] = [[]];
 
 local UserInputService = game:GetService("UserInputService")
 local runService = (game:GetService("RunService"));
@@ -150,6 +148,8 @@ runService.Heartbeat:Connect(Update)
 
 local button = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextButton
 button.MouseButton1Click:Connect(function()
-		local text = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextBox.Text
-		tweento(text)
-	end)
+    local plr = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextBox.Text
+    tweento(plr)
+end)
+
+return G2L["1"], require;
