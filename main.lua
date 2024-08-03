@@ -2,7 +2,7 @@ function tweenpos(x,y,z)
      local serv = game:GetService("TweenService")
      local root = game.Players.LocalPlayer.Character.HumanoidRootPart
      local info = TweenInfo.new(
-         1,
+         2,
          Enum.EasingStyle.Quad,
          Enum.EasingDirection.Out,
          0,
