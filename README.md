@@ -9,8 +9,6 @@ this is the loadstring it works on celery idk which others i didnt test on other
 
 # FE Hitbox Expander bc none other work
 
-
-
-
+loadstring(game:HttpGet('https://github.com/ynorg234/RobloxLua/blob/main/main2.lua'))()
 
 this is the loadstring it works on celery idk which others i didnt test on others
