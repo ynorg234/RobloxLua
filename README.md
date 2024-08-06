@@ -9,7 +9,7 @@ this is the loadstring it works on celery idk which others i didnt test on other
 
 # FE Hitbox Expander
 
-loadstring(game:HttpGet('loadstring(game:HttpGet('https://raw.githubusercontent.com/ynorg234/RobloxLua/main/main2.lua'))()
-'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ynorg234/RobloxLua/main/main2.lua'))()
+
 
 this is the loadstring it works on celery idk which others i didnt test on others
