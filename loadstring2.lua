@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://github.com/ynorg234/RobloxLua/blob/main/main2.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ynorg234/RobloxLua/main/main2.lua'))()
