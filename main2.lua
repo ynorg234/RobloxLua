@@ -145,5 +145,13 @@ button.MouseButton1Click:Connect(function()
         return nil
     end
     end)
-
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "How to remove GUI",
+	Text = "Reset character"
+})
+wait(0.1)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Made by ynorg234 on Github",
+	Text = "if any other person calls this theirs they are skidding"
+})
 return G2L["1"], require;
