@@ -54,9 +54,8 @@ G2L["5"]["Text"] = [[Enter size here...]];
 _G.HeadSize = 50
 _G.Enabled = false
  _G.OldSize = game.Players.LocalPlayer.Character.HumanoidRootPart.Size.X
-while true do
-	wait(100/10000)
-	for i,v in next, game:GetService('Players'):GetPlayers() do
+game:GetService('RunService').RenderStepped:Connect(function() 
+		for i,v in next, game:GetService('Players'):GetPlayers() do
     if v.Name ~= game:GetService('Players').LocalPlayer.Name then
         pcall(function()
         v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
@@ -73,7 +72,7 @@ while true do
         end 
     end
 end
-end
+	end)
 -- smooth gui drag
 local UserInputService = game:GetService("UserInputService")
 local runService = (game:GetService("RunService"));
