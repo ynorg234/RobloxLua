@@ -52,9 +52,9 @@ G2L["5"]["Text"] = [[Enter size here...]];
 
 -- Main Script
 _G.HeadSize = 50
-_G.Enabled = false
  _G.OldSize = game.Players.LocalPlayer.Character.HumanoidRootPart.Size.X
-game:GetService('RunService').RenderStepped:Connect(function() 
+_G.Enabled = false
+function enable()
 		for i,v in next, game:GetService('Players'):GetPlayers() do
     if v.Name ~= game:GetService('Players').LocalPlayer.Name then
         pcall(function()
@@ -64,15 +64,19 @@ game:GetService('RunService').RenderStepped:Connect(function()
         v.Character.HumanoidRootPart.Material = "Neon"
         v.Character.HumanoidRootPart.CanCollide = false   
     end)
-    if _G.Enabled ~= true then
-            pcall(function()
-            v.Character.HumanoidRootPart.Size = Vector3.new(_G.OldSize,_G.OldSize,_G.OldSize)
-            v.Character.HumanoidRootPart.Transparency = 1
-        end)
-        end 
     end
 end
-	end)
+end
+function disable()
+	pcall(function()
+	    for i,v in next, game:GetService("Players"):GetPlayers() do
+		    if v.Name ~= game.Players.LocalPlayer.Name then	
+		            v.Character.HumanoidRootPart.Size = Vector3.new(_G.OldSize,_G.OldSize,_G.OldSize)
+		            v.Character.HumanoidRootPart.Transparency = 1
+				end
+			end
+        end)
+end
 -- smooth gui drag
 local UserInputService = game:GetService("UserInputService")
 local runService = (game:GetService("RunService"));
@@ -135,6 +139,7 @@ button.MouseButton1Click:Connect(function()
         button.BackgroundColor3 = Color3.fromRGB(237, 38, 0)
         _G.Enabled = true
         _G.HeadSize = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextBox.Text
+	enable()
         return nil
     end
     if _G.Enabled == true then
@@ -142,6 +147,7 @@ button.MouseButton1Click:Connect(function()
         button.BackgroundColor3 = Color3.fromRGB(156, 201, 0)
         _G.Enabled = false
         _G.HeadSize = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.TextBox.Text
+	disable()
         return nil
     end
     end)
